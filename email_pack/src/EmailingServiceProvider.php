@@ -4,6 +4,7 @@ namespace CooperativeComputing\Email;
 
 use Illuminate\Support\ServiceProvider;
 
+
 class EmailingServiceProvider extends ServiceProvider
 {
     public function boot()
