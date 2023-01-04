@@ -1,5 +1,5 @@
 {
-    "name": "cooperativecomputing/mailing-template",
+    "name": "areeb/email-boiler-plate",
     "type": "package",
     "description": "A basic template for emailing.",
     "license": "MIT",
