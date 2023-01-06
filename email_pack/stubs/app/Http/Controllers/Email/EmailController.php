@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\EMails;
+namespace App\Http\Controllers\Emails;
 
 use App\Http\Controllers\Controller;
 use App\Mail\Emails;
@@ -10,7 +10,7 @@ class EmailController extends Controller
 {
     public function index()
     {
-        return view('emails.email-index');
+        return view('emails.index');
     }
 
     public function sendEmail()
