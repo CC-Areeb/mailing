@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\EmailController;
+use App\Http\Controllers\Emails\EmailController;
 use Illuminate\Support\Facades\Route;
 
 Route::prefix('email')->group(function () {
