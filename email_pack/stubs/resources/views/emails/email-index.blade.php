@@ -34,6 +34,7 @@
 
 <body>
     <form action="{{ route('sendEmail') }}" method="POST" enctype="multipart/form-data" autocomplete="off">
+        @csrf
         <div>
             <input type="submit" value="Send Email" id="send_email_btn">
         </div>

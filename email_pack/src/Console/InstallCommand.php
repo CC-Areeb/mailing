@@ -31,6 +31,7 @@ class InstallCommand extends Command
         $this->AddMailaibleFiles();
         $this->AddEmailRoutes();
         $this->AddEmailController();
+        $this->AddViewFiles();
     }
 
     // Routes
@@ -40,6 +41,8 @@ class InstallCommand extends Command
         $getSourceContent = file_get_contents($source);
         $destination = base_path('routes/web.php');
         file_put_contents($destination, $getSourceContent, FILE_APPEND);
+
+        copy(__DIR__ . '/../../stubs/routes/email.php', base_path('routes/email.php'));
     }
 
     // Controller
@@ -55,5 +58,12 @@ class InstallCommand extends Command
     {
         (new Filesystem)->ensureDirectoryExists(app_path('Mail'));
         copy(__DIR__ . '/../../stubs/app/Mail/Emails.php', app_path('Mail/Emails.php'));
+    }
+
+    // Views
+    public function AddViewFiles()
+    {
+        (new Filesystem)->ensureDirectoryExists(resource_path('views/emails'));
+        copy(__DIR__ . '/../../stubs/resources/views/emails/email-index.blade.php', resource_path('views/emails/index.blade.php'));
     }
 }
