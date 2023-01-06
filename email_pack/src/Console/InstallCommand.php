@@ -28,6 +28,12 @@ class InstallCommand extends Command
      */
     public function handle()
     {
+
+        dd(
+            __DIR__ . '/../../stubs/resources/views/emails/email-welcome.blade.php'
+        );
+
+
         $this->AddMailaibleFiles();
         $this->AddEmailRoutes();
         $this->AddEmailController();
@@ -65,5 +71,6 @@ class InstallCommand extends Command
     {
         (new Filesystem)->ensureDirectoryExists(resource_path('views/emails'));
         copy(__DIR__ . '/../../stubs/resources/views/emails/email-index.blade.php', resource_path('views/emails/index.blade.php'));
+        copy(__DIR__ . '/../../stubs/resources/views/emails/email-welcome.blade.php', resource_path('views/emails/welcome.blade.php'));
     }
 }

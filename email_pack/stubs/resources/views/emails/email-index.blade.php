@@ -10,12 +10,12 @@
     <style>
         /* sms and email buttons */
         #send_email_btn {
-            width: 50%;
+            width: 100%;
             font-size: large;
             background-color: #3852a0;
             color: white;
             padding: 14px 20px;
-            margin: auto auto;
+            margin: 50px auto;
             border: none;
             border-radius: 4px;
             cursor: pointer;
