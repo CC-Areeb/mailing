@@ -35,7 +35,7 @@ class Emails extends Mailable implements ShouldQueue
         $this->from($this->validator['sender'])
             ->subject($this->validator['subject'])
             ->to($this->validator['to'])
-            ->markdown('cc-email::emailWelcome');
+            ->markdown('emails.welcome');
         return $this;
     }
 }
