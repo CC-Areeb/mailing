@@ -9,6 +9,10 @@ class EmailingServiceProvider extends ServiceProvider
 {
     public function boot()
     {
+        $this->publishes([
+            __DIR__.'/../config/email.php' => config_path('email.php'),
+        ], 'CC-Emails');
+
         if ($this->app->runningInConsole()) {
             $this->commands([
                 Console\InstallCommand::class
