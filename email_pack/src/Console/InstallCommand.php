@@ -28,12 +28,6 @@ class InstallCommand extends Command
      */
     public function handle()
     {
-
-        dd(
-            __DIR__ . '/../../stubs/resources/views/emails/email-welcome.blade.php'
-        );
-
-
         $this->AddMailaibleFiles();
         $this->AddEmailRoutes();
         $this->AddEmailController();
