@@ -66,9 +66,9 @@ public function build()
 public function sendEmail()
 {
     $attachments = [
-        base_path('composer.json'),
-        base_path('README.md'),
-        base_path('package.json'),
+        <attachment_1>,
+        <attachment_2>,
+        <attachment_3>,
     ];
 
     $validator = [
