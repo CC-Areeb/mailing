@@ -2,7 +2,9 @@
 
 **Composer command** 
 
+```
 composer require areeb/email-boiler-plate
+```
 
 
 #
