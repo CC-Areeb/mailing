@@ -3,7 +3,7 @@
 **Composer command** 
 
 ```
-composer require areeb/email-boiler-plate
+composer require cooperativecomputing/email-boiler-plate
 ```
 
 
@@ -46,36 +46,6 @@ To run this project, you will need to add the following environment variables to
 
 ## Code snippets
 
-#### You can send OTP numbers in your mail
-```
-class EmailController extends Controller
-{
-    public function index()
-    {
-        return view('emails.index');
-    }
-
-    public function sendEmail()
-    {
-        $otp = $this->generateOTP();
-        $validator = [
-            'sender' => 'sender@mail.com',
-            'to' => 'receiver@mail.com',
-            'subject' => 'some subject',
-            'message' => 'A message from sender with OTP: ' . $otp,
-        ];
-        Mail::queue((new Emails($validator))->onQueue('emails'));
-        return "mail has been sent";
-    }
-
-    public function generateOTP()
-    {
-        return random_int(0, 99999);
-    }
-}
-```
-
-#
 #### Sending an attachment
 
 ```
@@ -102,10 +72,10 @@ public function sendEmail()
     ];
 
     $validator = [
-        'sender' => 'sender@mail.com',
-        'to' => 'receiver@mail.com',
-        'subject' => 'some subject',
-        'message' => 'A message from sender',
+        'sender' => '<sender>',
+        'to' => '<receiver>',
+        'subject' => '<subject>',
+        'message' => '<message>',
         'attachments' => $attachments
     ];
     Mail::queue((new Emails($validator))->onQueue('emails'));
@@ -151,8 +121,3 @@ class Emails extends Mailable implements ShouldQueue
         return $this;
     }
 ```
-
-
-
-
-
