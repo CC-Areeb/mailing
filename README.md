@@ -3,7 +3,7 @@
 **Composer command** 
 
 ```
-composer require cooperativecomputing/email-boiler-plate
+composer require areeb-malik/email-boiler-plate
 ```
 
 
